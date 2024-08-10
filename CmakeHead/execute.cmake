@@ -1,0 +1,8 @@
+include(${CMAKE_HEAD}/compile_all_file.cmake)
+macro(compile_execute)
+message("begin compile_execute")
+get_source_files_exclude_build(SRC_FILES)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
+add_executable(${PROJECT_NAME} ${SRC_FILES})
+endmacro()
+compile_execute()
