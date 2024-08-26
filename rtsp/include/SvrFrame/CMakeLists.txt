@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(SvrFrame)
+set(LIBXML2 ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+include(${CMAKE_HEAD}/sharedObject.cmake)

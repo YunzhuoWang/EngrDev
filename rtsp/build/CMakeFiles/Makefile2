@@ -63,57 +63,131 @@ CMAKE_BINARY_DIR = /home/abi/桌面/CodeRepository/EngrDev/rtsp/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: startSvr/all
+all: include/all
+all: tools/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: startSvr/preinstall
+preinstall: include/preinstall
+preinstall: tools/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: startSvr/clean
+clean: include/clean
+clean: tools/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory startSvr
+# Directory level rules for directory include
 
 # Recursive "all" directory target.
-startSvr/all: startSvr/CMakeFiles/startSvr.dir/all
-.PHONY : startSvr/all
+include/all: include/SvrFrame/all
+.PHONY : include/all
 
 # Recursive "preinstall" directory target.
-startSvr/preinstall:
-.PHONY : startSvr/preinstall
+include/preinstall: include/SvrFrame/preinstall
+.PHONY : include/preinstall
 
 # Recursive "clean" directory target.
-startSvr/clean: startSvr/CMakeFiles/startSvr.dir/clean
-.PHONY : startSvr/clean
+include/clean: include/SvrFrame/clean
+.PHONY : include/clean
 
 #=============================================================================
-# Target rules for target startSvr/CMakeFiles/startSvr.dir
+# Directory level rules for directory include/SvrFrame
+
+# Recursive "all" directory target.
+include/SvrFrame/all: include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/all
+.PHONY : include/SvrFrame/all
+
+# Recursive "preinstall" directory target.
+include/SvrFrame/preinstall:
+.PHONY : include/SvrFrame/preinstall
+
+# Recursive "clean" directory target.
+include/SvrFrame/clean: include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/clean
+.PHONY : include/SvrFrame/clean
+
+#=============================================================================
+# Directory level rules for directory tools
+
+# Recursive "all" directory target.
+tools/all: tools/startSvr/all
+.PHONY : tools/all
+
+# Recursive "preinstall" directory target.
+tools/preinstall: tools/startSvr/preinstall
+.PHONY : tools/preinstall
+
+# Recursive "clean" directory target.
+tools/clean: tools/startSvr/clean
+.PHONY : tools/clean
+
+#=============================================================================
+# Directory level rules for directory tools/startSvr
+
+# Recursive "all" directory target.
+tools/startSvr/all: tools/startSvr/CMakeFiles/startSvr.dir/all
+.PHONY : tools/startSvr/all
+
+# Recursive "preinstall" directory target.
+tools/startSvr/preinstall:
+.PHONY : tools/startSvr/preinstall
+
+# Recursive "clean" directory target.
+tools/startSvr/clean: tools/startSvr/CMakeFiles/startSvr.dir/clean
+.PHONY : tools/startSvr/clean
+
+#=============================================================================
+# Target rules for target include/SvrFrame/CMakeFiles/SvrFrame_shared.dir
 
 # All Build rule for target.
-startSvr/CMakeFiles/startSvr.dir/all:
-	$(MAKE) $(MAKESILENT) -f startSvr/CMakeFiles/startSvr.dir/build.make startSvr/CMakeFiles/startSvr.dir/depend
-	$(MAKE) $(MAKESILENT) -f startSvr/CMakeFiles/startSvr.dir/build.make startSvr/CMakeFiles/startSvr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles --progress-num=1,2 "Built target startSvr"
-.PHONY : startSvr/CMakeFiles/startSvr.dir/all
+include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/all:
+	$(MAKE) $(MAKESILENT) -f include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build.make include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/depend
+	$(MAKE) $(MAKESILENT) -f include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build.make include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles --progress-num=1,2 "Built target SvrFrame_shared"
+.PHONY : include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/all
 
 # Build rule for subdir invocation for target.
-startSvr/CMakeFiles/startSvr.dir/rule: cmake_check_build_system
+include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startSvr/CMakeFiles/startSvr.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles 0
-.PHONY : startSvr/CMakeFiles/startSvr.dir/rule
+.PHONY : include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/rule
 
 # Convenience name for target.
-startSvr: startSvr/CMakeFiles/startSvr.dir/rule
+SvrFrame_shared: include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/rule
+.PHONY : SvrFrame_shared
+
+# clean rule for target.
+include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/clean:
+	$(MAKE) $(MAKESILENT) -f include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build.make include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/clean
+.PHONY : include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/clean
+
+#=============================================================================
+# Target rules for target tools/startSvr/CMakeFiles/startSvr.dir
+
+# All Build rule for target.
+tools/startSvr/CMakeFiles/startSvr.dir/all:
+	$(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/depend
+	$(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles --progress-num=3,4 "Built target startSvr"
+.PHONY : tools/startSvr/CMakeFiles/startSvr.dir/all
+
+# Build rule for subdir invocation for target.
+tools/startSvr/CMakeFiles/startSvr.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/startSvr/CMakeFiles/startSvr.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles 0
+.PHONY : tools/startSvr/CMakeFiles/startSvr.dir/rule
+
+# Convenience name for target.
+startSvr: tools/startSvr/CMakeFiles/startSvr.dir/rule
 .PHONY : startSvr
 
 # clean rule for target.
-startSvr/CMakeFiles/startSvr.dir/clean:
-	$(MAKE) $(MAKESILENT) -f startSvr/CMakeFiles/startSvr.dir/build.make startSvr/CMakeFiles/startSvr.dir/clean
-.PHONY : startSvr/CMakeFiles/startSvr.dir/clean
+tools/startSvr/CMakeFiles/startSvr.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/clean
+.PHONY : tools/startSvr/CMakeFiles/startSvr.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

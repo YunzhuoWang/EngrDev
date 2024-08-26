@@ -1,0 +1,5 @@
+function(link_so_files target so_files)
+    foreach(so_file ${so_files})
+        target_link_libraries(${target} "${so_file}")
+    endforeach()
+endfunction()

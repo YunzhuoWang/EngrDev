@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/startSvr.dir/startSvr.cpp.o -o /home/abi/桌面/CodeRepository/EngrDev/bin/startSvr   -L/home/abi/桌面/CodeRepository/EngrDev/lib  -Wl,-rpath,/home/abi/桌面/CodeRepository/EngrDev/lib -lSvrFrame 

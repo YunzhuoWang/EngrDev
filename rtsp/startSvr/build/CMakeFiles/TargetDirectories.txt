@@ -1,3 +1,0 @@
-/home/abi/桌面/CodeRepository/EngrDev/rtsp/startSvr/build/CMakeFiles/svrStart.dir
-/home/abi/桌面/CodeRepository/EngrDev/rtsp/startSvr/build/CMakeFiles/edit_cache.dir
-/home/abi/桌面/CodeRepository/EngrDev/rtsp/startSvr/build/CMakeFiles/rebuild_cache.dir

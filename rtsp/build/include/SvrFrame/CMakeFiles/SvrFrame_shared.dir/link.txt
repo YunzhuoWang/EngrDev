@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libSvrFrame.so -o /home/abi/桌面/CodeRepository/EngrDev/lib/libSvrFrame.so CMakeFiles/SvrFrame_shared.dir/KernelModuleMgr.cpp.o   -L/home/abi/桌面/CodeRepository/EngrDev/lib  -Wl,-rpath,/home/abi/桌面/CodeRepository/EngrDev/lib: /usr/lib/x86_64-linux-gnu/libxml2.so 

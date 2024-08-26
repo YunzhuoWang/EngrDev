@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles /home/abi/桌面/CodeRepository/EngrDev/rtsp/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/tools/startSvr//CMakeFiles/progress.marks
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/startSvr/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/startSvr/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,44 +148,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/startSvr/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/startSvr/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named SvrFrame_shared
+# Convenience name for target.
+tools/startSvr/CMakeFiles/startSvr.dir/rule:
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/startSvr/CMakeFiles/startSvr.dir/rule
+.PHONY : tools/startSvr/CMakeFiles/startSvr.dir/rule
 
-# Build rule for target.
-SvrFrame_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SvrFrame_shared
-.PHONY : SvrFrame_shared
-
-# fast build rule for target.
-SvrFrame_shared/fast:
-	$(MAKE) $(MAKESILENT) -f include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build.make include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build
-.PHONY : SvrFrame_shared/fast
-
-#=============================================================================
-# Target rules for targets named startSvr
-
-# Build rule for target.
-startSvr: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startSvr
+# Convenience name for target.
+startSvr: tools/startSvr/CMakeFiles/startSvr.dir/rule
 .PHONY : startSvr
 
 # fast build rule for target.
 startSvr/fast:
-	$(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/build
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/build
 .PHONY : startSvr/fast
+
+startSvr.o: startSvr.cpp.o
+.PHONY : startSvr.o
+
+# target to build an object file
+startSvr.cpp.o:
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/startSvr.cpp.o
+.PHONY : startSvr.cpp.o
+
+startSvr.i: startSvr.cpp.i
+.PHONY : startSvr.i
+
+# target to preprocess a source file
+startSvr.cpp.i:
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/startSvr.cpp.i
+.PHONY : startSvr.cpp.i
+
+startSvr.s: startSvr.cpp.s
+.PHONY : startSvr.s
+
+# target to generate assembly for a file
+startSvr.cpp.s:
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/startSvr.cpp.s
+.PHONY : startSvr.cpp.s
 
 # Help Target
 help:
@@ -199,8 +211,10 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... SvrFrame_shared"
 	@echo "... startSvr"
+	@echo "... startSvr.o"
+	@echo "... startSvr.i"
+	@echo "... startSvr.s"
 .PHONY : help
 
 
@@ -212,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

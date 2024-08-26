@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles /home/abi/桌面/CodeRepository/EngrDev/rtsp/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/tools//CMakeFiles/progress.marks
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/abi/桌面/CodeRepository/EngrDev/rtsp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,44 +148,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named SvrFrame_shared
-
-# Build rule for target.
-SvrFrame_shared: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SvrFrame_shared
-.PHONY : SvrFrame_shared
-
-# fast build rule for target.
-SvrFrame_shared/fast:
-	$(MAKE) $(MAKESILENT) -f include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build.make include/SvrFrame/CMakeFiles/SvrFrame_shared.dir/build
-.PHONY : SvrFrame_shared/fast
-
-#=============================================================================
-# Target rules for targets named startSvr
-
-# Build rule for target.
-startSvr: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 startSvr
-.PHONY : startSvr
-
-# fast build rule for target.
-startSvr/fast:
-	$(MAKE) $(MAKESILENT) -f tools/startSvr/CMakeFiles/startSvr.dir/build.make tools/startSvr/CMakeFiles/startSvr.dir/build
-.PHONY : startSvr/fast
 
 # Help Target
 help:
@@ -199,8 +173,6 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... SvrFrame_shared"
-	@echo "... startSvr"
 .PHONY : help
 
 
@@ -212,6 +184,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/abi/桌面/CodeRepository/EngrDev/rtsp/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

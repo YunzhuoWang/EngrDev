@@ -1,4 +1,4 @@
 #!/bin/bash
 echo "Service Start"
-./startSvr 'testSvr' 'testSvr2' &
+./startSvr '../etc/kernelModule.xml'&
 echo "Service end"
